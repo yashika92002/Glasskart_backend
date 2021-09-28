@@ -13,8 +13,11 @@ var priceRouter = require('./routes/price');
 var shapeRouter = require('./routes/shape');
 var frameRouter = require('./routes/frame');
 var colorRouter = require('./routes/color');
+var mainpageRouter = require('./routes/mainpage');
 var materialRouter = require('./routes/material');
 var adminRouter = require('./routes/admin');
+var productRouter = require('./routes/product');
+var finalproductRouter = require('./routes/finalproduct');
 
 var app = express();
 
@@ -39,6 +42,9 @@ app.use('/frame', frameRouter);
 app.use('/color', colorRouter);
 app.use('/material', materialRouter);
 app.use('/admin', adminRouter);
+app.use('/product', productRouter);
+app.use('/mainpage', mainpageRouter);
+app.use('/finalproduct', finalproductRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
