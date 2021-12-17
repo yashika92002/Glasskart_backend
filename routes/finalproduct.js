@@ -148,6 +148,7 @@ router.post('/editproductpicture', upload.single("picture"), function (req, res,
 
 router.post('/updatefinalproductdata', function (req, res, next) {
   console.log("BODY:", req.body)
+  
   pool.query('update finalproduct set   productid=?, colorid=?, size=?, price=?, offertype=?, offerprice=?, description=?, stock=? where finalproductid=?', [req.body.finalproductname, req.body.color, req.body.size, req.body.price, req.body.offertype, req.body.offerprice, req.body.description,req.body.stock, req.body.finalproductid], function (error, result) {
     if (error) {
       res.status(500).json(false)

@@ -18,6 +18,7 @@ var materialRouter = require('./routes/material');
 var adminRouter = require('./routes/admin');
 var productRouter = require('./routes/product');
 var finalproductRouter = require('./routes/finalproduct');
+var userDetailsRouter = require('./routes/userdetails');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use('/admin', adminRouter);
 app.use('/product', productRouter);
 app.use('/mainpage', mainpageRouter);
 app.use('/finalproduct', finalproductRouter);
+app.use('/userdetails',userDetailsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
